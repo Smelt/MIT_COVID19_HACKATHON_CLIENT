@@ -14,26 +14,70 @@ import OptionModal from './optionModal'
 
 
 class LongCall extends React.Component {
-
     state = {
-        optionModalOpen: false
+        password: '',
+        username: ''
+    }
+
+    componentDidMount() {
+        setTimeout(() => {
+            this.setUsername();
+            this.setPassWord();
+        }, 1000)
+    }
+
+    setUsername() {
+        const username = 'Test User';
+        let sumRandom = 0;
+        for (let i = 0; i <= username.length; i++) {
+            sumRandom += Math.floor(Math.random() * 50) + 50;
+            setTimeout(() => {
+                this.setState({
+                    username: username.substring(0, i)
+                })
+            }, sumRandom)
+        }
+        sumRandom += 400;
+        const password = 'VeryLongPassWord'
+        for (let i = 0; i <= password.length; i++) {
+            sumRandom += Math.floor(Math.random() * 50) + 50;
+            setTimeout(() => {
+                this.setState({
+                    password: password.substring(0, i)
+                })
+            }, sumRandom)
+        }
+
     }
 
 
-    toggleOptionModal = () => {
-        this.setState((prevState, state) => ({
-            optionModalOpen : !prevState.optionModalOpen
-        }))
-    }
+
 
     render() {
-   
 
-        const { classes, theme } = this.props
-       
+
+        const { classes, theme } = this.props;
+        const { password, username } = this.state;
         return (
-            <div className="login">
-
+            <div className={classes.root}>
+                <header className={classes.header}>
+                    <h1>
+                        Respire
+          </h1>
+                </header>
+                <form className={classes.form}>
+                    <input className={classes.input} type='text' placeholder='Name' value={username}/>
+                    <input className={classes.input} type='password' placeholder='Password' value={password}/>
+                    <button
+                        onClick={this.loginModal}
+                        className={classes.loginBtn}>
+                        Login
+                    </button>
+                    <button className={classes.signupBtn}>
+                        <h4>Sign Up</h4>
+                        <i className='material-icons'>keyboard_arrow_right</i>
+                    </button>
+                </form>
             </div>
 
         )

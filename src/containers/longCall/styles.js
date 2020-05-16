@@ -1,38 +1,78 @@
 import { rgbToHex } from "@material-ui/core";
 
 export const styles = theme => ({
-    displayFlex: {
+    form: {
+        width: '90vw'
+    },
+    forgotPassword: {
+        alignItems: 'flex-start',
+        color: 'rgb(65, 150, 181)',
+        textDecoration: 'none',
+        fontFamily: "TT Norms",
+        transition: 'color 0.25s ease'
+    },
+    header: {
         display: 'flex',
-        marginBottom: '8px',
-        width: '100%'
+        flexDirection: 'column',
+        alignContent: 'center',
+        justifyContent: 'center',
+        flexGrow: 1,
     },
-    searchForm: {
-        padding: '5px 15x',
+    input: {
+        boxSizing: 'border-box',
+        padding: '0 10px',
+        height: '54px',
+        width: '100%',
+        fontSize: '24px',
+        fontWeight: 'bold',
+        lineHeight: '22px',
+        backgroundColor: 'rgb(234, 238, 238)',
+        border: '2px solid transparent',
+        borderRadius: '7px',
+        marginBottom: '15px',
+        transition: 'border 0.25s ease',
+        fontFamily: "TT Norms",
+        color: '#777777'
+    },
+    loginBtn: {
+        display: 'inline-block',
+        border: 'none',
+      height: '54px',
+      width: '100%',
+      margin: '20px 0',
+      borderRadius: '7px',
+      backgroundColor: 'rgb(65, 150, 181)',
+      color: '#fff',
+      fontSize: '24px',
+      fontWeight: 'bold',
+      cursor: 'pointer',
+      fontFamily: "TT Norms",
+      transition: 'background-color 0.25s ease'
+    },
+    root: {
         display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        height: '100%',
+        padding: '20px 0',
+        boxSizing: 'border-box'
     },
-    selectLabel: {
-        position: 'relative',
-        marginRight: '15px',
-        top: '5px',
-        fontSize: '12px',
-        fontWeight: 400
-    },
-    inputCard: {
-        padding: '12px'
-    },
-    inputTitle: {
-        fontWeigth: 900,
-        color: 'rgb(40,40,40)',
-        paddingBottom: '10px',
-        width: '100%'
-    },
-    selectOptions: {
-        width: '100px',
-        paddingLeft: '3px',
-        fontSize: '12px'
-    },
-    selectOptionButton: {
-        position: 'relative',
-        top: '2px'
+    signupBtn: {
+        boxSizing: 'border-box',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        height: '48px',
+        width: '100%',
+        backgroundColor: 'rgb(234, 238, 238)',
+        border: '2px solid rgb(234, 238, 238)',
+        borderRadius: '7px',
+        padding: '0 15px',
+        marginBottom: '125px',
+        color: '#777777',
+        cursor: 'pointer',
+        fontFamily: "TT Norms",
+        transition: 'border 0.25s ease'
     }
 })
