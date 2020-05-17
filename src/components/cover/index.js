@@ -46,8 +46,8 @@ class Cover extends React.Component {
         return (
             <div className={classes.root}>
                 
-                        <Typography variant="h6" noWrap>
-                            Options IQ
+          <Typography variant="h6" noWrap>
+                Options IQ
           </Typography>
                    
                 <main className={classes.content}>

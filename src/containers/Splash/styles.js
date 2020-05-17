@@ -49,6 +49,17 @@ export const styles = theme => ({
       fontFamily: "TT Norms",
       transition: 'background-color 0.25s ease'
     },
+    modalContent: {
+        height: '30vh',
+        width: '80vw',
+        padding: '2vh 5vw',
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        transition: 'opacity 0.5s ease',
+        backgroundColor: 'rgb(250,250,250)'
+    },
     root: {
         display: 'flex',
         flexDirection: 'column',
