@@ -1,7 +1,7 @@
 {
-  "name": "options",
+  "name": "respire",
   "version": "1.0.0",
-  "description": "Options charting and pricing",
+  "description": "Respire COVID 19 MIT Hackathon",
   "main": "app.js",
   "proxy": "http://localhost:3000",
   "scripts": {
@@ -9,7 +9,7 @@
     "build": "webpack",
     "dev-server": "webpack-dev-server"
   },
-  "author": "",
+  "author": "Shivam Satyarthi",
   "license": "ISC",
   "dependencies": {
     "@material-ui/core": "^4.9.0",
